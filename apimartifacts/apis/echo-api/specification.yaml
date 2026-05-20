@@ -1,6 +1,7 @@
 openapi: 3.0.1
 info:
   title: Echo API
+  description: A simple echo API that returns the request headers and body as the response.
   version: '1.0'
 servers:
   - url: https://api01mf-dev.azure-api.net/echo

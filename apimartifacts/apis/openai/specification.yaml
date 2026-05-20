@@ -1,16 +1,18 @@
 openapi: 3.0.1
 info:
   title: Microsoft Foundry (DEV)
+  description: Microsoft Foundry OpenAI API for chat completions.
   version: '1.0'
 servers:
   - url: https://apim-dev-jyovrk3lbu45e.azure-api.net/openai
 paths:
-  '/deployments/{deployment-id}/chat/completions':
+  '/deployments/{deploymentId}/chat/completions':
     post:
       summary: Chat Completions
+      description: Create a chat completion using a deployed OpenAI model.
       operationId: chat-completions
       parameters:
-        - name: deployment-id
+        - name: deploymentId
           in: path
           required: true
           schema:
@@ -18,19 +20,19 @@ paths:
               - gpt-4o-mini
             type: string
             default: gpt-4o-mini
-        - name: api-version
+        - name: apiVersion
           in: query
           required: true
           schema:
             enum:
               - 2024-12-01-preview
             type: string
-        - name: Content-Type
+        - name: contentType
           in: header
           schema:
             enum:
               - ''
-            type: ''
+            type: string
             default: ''
       responses:
         '200':
