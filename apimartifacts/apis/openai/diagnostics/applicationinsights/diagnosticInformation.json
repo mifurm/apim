@@ -1,0 +1,36 @@
+{
+  "properties": {
+    "loggerId": "/loggers/appinsights-logger",
+    "alwaysLog": "allErrors",
+    "backend": {
+      "request": {
+        "body": {
+          "bytes": 512
+        }
+      },
+      "response": {
+        "body": {
+          "bytes": 512
+        }
+      }
+    },
+    "frontend": {
+      "request": {
+        "body": {
+          "bytes": 512
+        }
+      },
+      "response": {
+        "body": {
+          "bytes": 512
+        }
+      }
+    },
+    "httpCorrelationProtocol": "Legacy",
+    "logClientIp": true,
+    "sampling": {
+      "percentage": 100,
+      "samplingType": "fixed"
+    }
+  }
+}

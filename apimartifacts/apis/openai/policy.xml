@@ -1,0 +1,23 @@
+<policies>
+	<inbound>
+		<base />
+		<set-header name="api-key" exists-action="override">
+			<value>{{openai-api-key}}</value>
+		</set-header>
+		<set-header name="x-apim-instance" exists-action="override">
+			<value>foundry-dev</value>
+		</set-header>
+		<set-header name="x-environment" exists-action="override">
+			<value>dev</value>
+		</set-header>
+	</inbound>
+	<backend>
+		<base />
+	</backend>
+	<outbound>
+		<base />
+	</outbound>
+	<on-error>
+		<base />
+	</on-error>
+</policies>
