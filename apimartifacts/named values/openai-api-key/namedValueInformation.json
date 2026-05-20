@@ -1,0 +1,6 @@
+{
+  "properties": {
+    "displayName": "openai-api-key",
+    "secret": true
+  }
+}

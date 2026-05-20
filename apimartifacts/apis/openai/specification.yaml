@@ -1,0 +1,50 @@
+openapi: 3.0.1
+info:
+  title: Microsoft Foundry (DEV)
+  version: '1.0'
+servers:
+  - url: https://apim-dev-jyovrk3lbu45e.azure-api.net/openai
+paths:
+  '/deployments/{deployment-id}/chat/completions':
+    post:
+      summary: Chat Completions
+      operationId: chat-completions
+      parameters:
+        - name: deployment-id
+          in: path
+          required: true
+          schema:
+            enum:
+              - gpt-4o-mini
+            type: string
+            default: gpt-4o-mini
+        - name: api-version
+          in: query
+          required: true
+          schema:
+            enum:
+              - 2024-12-01-preview
+            type: string
+        - name: Content-Type
+          in: header
+          schema:
+            enum:
+              - ''
+            type: ''
+            default: ''
+      responses:
+        '200':
+          description: ''
+components:
+  securitySchemes:
+    apiKeyHeader:
+      type: apiKey
+      name: Ocp-Apim-Subscription-Key
+      in: header
+    apiKeyQuery:
+      type: apiKey
+      name: subscription-key
+      in: query
+security:
+  - apiKeyHeader: [ ]
+  - apiKeyQuery: [ ]

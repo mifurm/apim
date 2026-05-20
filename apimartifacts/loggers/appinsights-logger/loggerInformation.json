@@ -1,0 +1,10 @@
+{
+  "properties": {
+    "loggerType": "applicationInsights",
+    "credentials": {
+      "instrumentationKey": "{{Logger-Credentials--69ee2df76dc9ca0f64eaa3ac}}"
+    },
+    "isBuffered": true,
+    "resourceId": "/subscriptions/dbc090f1-6bbf-48bc-867e-8fb709cae3e7/resourceGroups/apiops07-rg/providers/Microsoft.Insights/components/appi-jyovrk3lbu45e"
+  }
+}
